@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7C331E"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.binjadu.dota2herolister.MainActivity" >
+
+    <Spinner
+        android:id="@+id/spinnerHeroes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerHeroes"
+        android:layout_below="@+id/spinnerHeroes"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listViewHeroInfo"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:background="#894734" >
+        </ListView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonGetMatches"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editTextuserID"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:background="#562314"
+        android:onClick="getMatches"
+        android:text="Get latest matches"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextuserID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonGetMatches"
+        android:ems="10"
+        android:text="40189808"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textViewAccountID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextuserID"
+        android:layout_alignLeft="@+id/editTextuserID"
+        android:text="Account ID"
+        android:textColor="#BE998F" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="450dp"
+            android:layout_marginLeft="250dp"
+            android:src="@drawable/dotalogo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textViewLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="#BE998F" />
+    </LinearLayout>
+
+</RelativeLayout>
